@@ -1,7 +1,4 @@
 #include <stdio.h>
-int main ()
-{
-    
     int busca_bin (int n, int *vet, int elem)
     {
         int ini = 0;
@@ -18,4 +15,9 @@ int main ()
     }
     return -1;
     }
+
+int main ()
+{
+    return 0;
 }
+
