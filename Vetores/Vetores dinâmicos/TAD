@@ -1,0 +1,81 @@
+Implementação das seguintes operações:
+* Cria: operação para criar um novo vetor, inicialmente vazio.
+
+* Insere: operação para inserir um novo elemento no final do vetor, com realocação automática, se necessário.
+
+* Tam: operação que retorna o número de elementos efetivamente armazenados.
+
+* Acessa: operação para acessar determinado vetor.
+
+* Libera: operação para liberar a mémoria do vetor
+vd_libera (VetorDin* vd)
+{
+free (vd -> v); //libera o vetor de float
+free (vd); //libera a estrutura
+}
+
+//Passos:
+// 1*) Define o tipo estruturado para armazenar o vetor
+struct VetorDin 
+{
+int n; //número de elementos armazenados
+int nmax; //dimensão do vetor
+float* v; //vetor dos elementos
+};
+
+/* 2*) Implemento a função para criar o vetor dinâmico
+- O vetor é criado com 0 elementos
+- É criado com um tamanho inicial de 4 */
+
+vetorDin* vd_cria ( )
+{
+VetorDin* vd = (VetorDin*) malloc (sizeof (VetorDin));
+vd -> n = 0;
+vd -> nmax = 4;
+vd -> v = (float*) malloc (vd -> nmax*sizeof (float));
+return vd;
+}
+
+// A função insere um elemento no final do vetor e redimensiona seu tamanho necesário (função auxiliar realoca ())
+
+static void realoca (VetorDin* vd)
+{
+vd -> nmax *= 2; //dobra a dimensão do vetor 
+vd -> v = (float*) realloc (vd->v, vd -> nmax*sizeof (float));
+}
+
+void insere vd_insere (VetorDin*vd, float x)
+{ 
+if (vd -> n == vd -> nmax) //verifica se a capacidade do vetor se esgotou
+realoca (vd);
+vd -> v [vd -> n] = x;
+vd -> n++;
+}
+
+// Funções de acesso a estrutura são as seguintes:
+int vd_tam (VetorDin* vd)
+{
+return vd -> n;
+}
+
+int vd_tam_max (VetorDin* vd)
+{
+return vd -> nmax;
+}
+
+float vd_acessa (VetorDin* vd, int i)
+{
+if (i < 0 || i >= vd -> n)
+{
+printf ("Valor fora dos limites do vetor ***Fim****\n");
+exit (5);
+}
+return vd -> v [i];
+}
+
+Exemplo vetor de valores reais (float)
+typedefDin* vd_cria ( );
+vd_insere (VetorDin* vd, float x);
+int vd_tam (VetorDin* vd);
+float vd_acessa (VetorDin* vd, int i);
+vd_libera (VetorDin* vd);
