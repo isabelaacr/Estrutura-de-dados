@@ -15,63 +15,94 @@ free (vd); //libera a estrutura
 }
 
 //Passos:
-// 1*) Define o tipo estruturado para armazenar o vetor
-struct VetorDin 
-{
-int n; //número de elementos armazenados
-int nmax; //dimensão do vetor
-float* v; //vetor dos elementos
-};
+#include <stdio.h>
+#include <stdlib.h>
 
-/* 2*) Implemento a função para criar o vetor dinâmico
-- O vetor é criado com 0 elementos
-- É criado com um tamanho inicial de 4 */
+// Define o tipo estruturado para armazenar o vetor
+typedef struct {
+    int n;        // número de elementos armazenados
+    int nmax;     // dimensão do vetor
+    float* v;     // vetor dos elementos
+} VetorDin;
 
-vetorDin* vd_cria ( )
+// Implementa a função para criar o vetor dinâmico
+VetorDin* vd_cria()
 {
-VetorDin* vd = (VetorDin*) malloc (sizeof (VetorDin));
-vd -> n = 0;
-vd -> nmax = 4;
-vd -> v = (float*) malloc (vd -> nmax*sizeof (float));
-return vd;
+    VetorDin* vd = (VetorDin*) malloc(sizeof(VetorDin));
+    vd->n = 0;
+    vd->nmax = 4;
+    vd->v = (float*) malloc(vd->nmax * sizeof(float));
+    return vd;
 }
 
-// A função insere um elemento no final do vetor e redimensiona seu tamanho necesário (função auxiliar realoca ())
-
-static void realoca (VetorDin* vd)
+// Função auxiliar para realocar o vetor caso necessário
+static void realoca(VetorDin* vd)
 {
-vd -> nmax *= 2; //dobra a dimensão do vetor 
-vd -> v = (float*) realloc (vd->v, vd -> nmax*sizeof (float));
-}
-
-void insere vd_insere (VetorDin*vd, float x)
-{ 
-if (vd -> n == vd -> nmax) //verifica se a capacidade do vetor se esgotou
-realoca (vd);
-vd -> v [vd -> n] = x;
-vd -> n++;
+    vd->nmax *= 2; // dobra a dimensão do vetor
+    vd->v = (float*) realloc(vd->v, vd->nmax * sizeof(float));
 }
 
-// Funções de acesso a estrutura são as seguintes:
-int vd_tam (VetorDin* vd)
+// Insere um elemento no vetor
+void vd_insere(VetorDin* vd, float x)
 {
-return vd -> n;
+    if (vd->n == vd->nmax) // verifica se a capacidade do vetor se esgotou
+        realoca(vd);
+    vd->v[vd->n] = x;
+    vd->n++;
 }
 
-int vd_tam_max (VetorDin* vd)
+// Retorna o tamanho atual do vetor
+int vd_tam(VetorDin* vd)
 {
-return vd -> nmax;
+    return vd->n;
 }
 
-float vd_acessa (VetorDin* vd, int i)
+// Retorna a capacidade máxima do vetor
+int vd_tam_max(VetorDin* vd)
 {
-if (i < 0 || i >= vd -> n)
+    return vd->nmax;
+}
+
+// Acessa o elemento de índice i no vetor
+float vd_acessa(VetorDin* vd, int i)
 {
-printf ("Valor fora dos limites do vetor ***Fim****\n");
-exit (5);
+    if (i < 0 || i >= vd->n) {
+        printf("Valor fora dos limites do vetor\n");
+        exit(5);
+    }
+    return vd->v[i];
 }
-return vd -> v [i];
+
+// Libera a memória alocada para o vetor
+void vd_libera(VetorDin* vd)
+{
+    free(vd->v);
+    free(vd);
 }
+
+int main()
+{
+    VetorDin* vetor = vd_cria();
+    vd_insere(vetor, 1.0);
+    vd_insere(vetor, 2.5);
+    vd_insere(vetor, 3.7);
+
+    int tamanho = vd_tam(vetor);
+    int tamanho_maximo = vd_tam_max(vetor);
+
+    printf("Tamanho: %d\n", tamanho);
+    printf("Tamanho máximo: %d\n", tamanho_maximo);
+
+    for (int i = 0; i < tamanho; i++) {
+        float valor = vd_acessa(vetor, i);
+        printf("Valor[%d]: %f\n", i, valor);
+    }
+
+    vd_libera(vetor);
+
+    return 0;
+}
+
 
 Exemplo vetor de valores reais (float)
 typedefDin* vd_cria ( );
