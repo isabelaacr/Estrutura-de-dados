@@ -1,3 +1,13 @@
 */  Cada elemento inserido requer uma alocação de memória.
  Não garante armazenamento em espaços contíguos de memória.
  É necessária a informação sobre o encadeamento dos elementos para que se possa acessá-los. /*
+
+*/ Numa lista simplesmente encadeada, junto com a informação a ser armazenada, um ponteiro para o
+próximo elemento da lista (ou nó) deve ser incluído.
+
+Características:
+ Tem um ponteiro indicando o início da lista (prim).
+ Cada elemento (nó) da lista tem, conceitualmente, dois campos: a informação armazenada e um ponteiro para o próximo elemento da lista.
+ A partir do primeiro elemento da lista posso alcançar o segundo e assim por diante.
+ O último elemento da lista contém, como próximo nó um ponteiro inválido, ou seja, NULL
+
