@@ -1,0 +1,3 @@
+*/  Cada elemento inserido requer uma alocação de memória.
+ Não garante armazenamento em espaços contíguos de memória.
+ É necessária a informação sobre o encadeamento dos elementos para que se possa acessá-los. /*
