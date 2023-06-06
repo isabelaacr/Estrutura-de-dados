@@ -1,0 +1,5 @@
+*/ Listas Simplesmente Encadeadas – Representações Recursivas
+
+Uma lista pode ser definida de forma recursiva, como:
+– Vazia (isto é, sem nenhum nó), ou;
+– Um nó seguido de um subencadeamento
