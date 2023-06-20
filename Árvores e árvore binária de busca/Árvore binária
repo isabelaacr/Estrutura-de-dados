@@ -1,0 +1,29 @@
+A árvore binária é um tipo especial de árvore.
+- Cada nó pode possuir nenhuma, uma ou no máximo duas sub-árvores
+- Sub-árvore da esquerda e a da direita
+- Usadas em situações onde, a cada passo, é preciso tomar uma decisão entre duas direções
+
+ Existem três tipos de árvores binárias
+* Estritamente binária
+- Cada nó possui sempre ou 0 (no caso de nó folha) ou 2 sub-árvores
+- Nenhum nó tem filho único
+
+* Completa
+- A diferença de altura entre as sub-árvores de qualquer nó é no máximo 1
+- Se a altura da árvore é D, cada nó folha está no nível D ou D-1
+
+* Cheia
+- Árvore estritamente binária onde todos os nó folhas estão no mesmo nível
+
+ Tipos de representação
+* Array (alocação estática): Necessário definir o número máximo de nós
+- Tamanho do array
+- Usa 2 funções para retornar a posição dos filhos à esquerda e à direita de um pai
+
+FILHO_ESQ(PAI) = 2 * PAI + 1
+FILHO_DIR(PAI) = 2 * PAI + 2
+
+
+* Lista encadeada (alocação dinâmica): Espaço de memória alocado em tempo de execução
+- A árvore cresce à medida que novos elementos são armazenados, e diminui à medida que elementos são removidos
+
