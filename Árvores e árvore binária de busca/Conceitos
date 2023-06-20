@@ -22,8 +22,7 @@ Basicamente, qualquer problema em que exista algum tipo de hierarquia pode ser r
 - Caminho: sequência de nós de modo que existe sempre uma aresta ligando o nó anterior com o seguinte
 
  Observação
-- Dado um determinado nó da árvore, cada filho seu é considerado a raiz de uma nova
-sub-árvore
+- Dado um determinado nó da árvore, cada filho seu é considerado a raiz de uma nova sub-árvore
 - Qualquer nó é a raiz de uma sub-árvore consistindo dele e dos nós abaixo dele
 - Conceito recursivo
 
@@ -41,12 +40,12 @@ sub-árvore
 
  Tipos diferentes de árvores.
 Cada uma delas foi desenvolvida pensando diferentes tipos de aplicações
-- árvore binária de busca
-- árvore AVL (é uma árvore binária de busca, AVL vem de seus criadores soviéticos Adelson Velsky e Landis)
-- árvore Rubro-Negra (árvore binária de busca balanceada)
+- árvore binária de busca: dividida em raíz com determinado valor e nó, sub-árvore esquerda e direita deve ser menor que a raíz
+- árvore AVL (é uma árvore binária de busca, AVL vem de seus criadores soviéticos Adelson Velsky e Landis): deve ter o mesmo número de elementos nas sub-árvores
+- árvore Rubro-Negra (árvore binária de busca balanceada):também busca balanceamento
 - árvore B, B+ e B* (árvore de busca balanceada)
 - Árvore 2-3
-- árvore 2-3-4
+- árvore 2-3-4: árvore com 4 filhos
 - quadtree
 - octree
 /*
