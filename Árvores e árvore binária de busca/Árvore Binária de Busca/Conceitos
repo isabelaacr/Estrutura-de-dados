@@ -1,0 +1,21 @@
+ Cada nó pode ter 0, 1 ou 2 filhos
+ Cada nó da árvore possui um valor (chave) associado a ele
+ Não existem valores repetidos (existem variações que permitem repetições, mas ficarão como exercício)
+ Esse valor determina a posição do nó na árvore
+ Possui a vantagem de ser uma estrutura dinâmica em comparação ao array
+ É mais fácil inserir valores na árvore do que em um array ordenado
+ Array: envolve deslocamento de elementos
+
+Regra para posicionamento dos valores na árvore
+ Para cada nó pai
+ todos os valores da subárvore esquerda são menores do que o nó pai
+ todos os valores da subárvore direita são maiores do que o nó pai;
+ Inserção e remoção devem ser realizadas respeitando essa regra de posicionamento dos nós.
+
+Para inserir um valor V na árvore
+ Se a raiz é igual a NULL (árvore vazia), insira o nó, que se tornará o nó raiz.
+ Se V é menor do que a raiz: vá para a subárvore esquerda
+ Se V é maior do que a raiz: vá para a subárvore direita
+ Aplique o método recursivamente
+ pode ser feito sem recursão
+ Dessa forma, percorremos um conjunto de nós da árvore até chegar ao nó folha que irá se tornar o pai do novo nó
