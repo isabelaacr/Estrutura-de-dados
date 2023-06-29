@@ -1,0 +1,106 @@
+Um grafo é um modelo matemático que representa as relações entre objetos de um determinado conjunto.
+
+Um grafo G(V,A) é definido por dois conjuntos:
+– Conjunto V de vértices (não vazio)
+● Itens representados em um grafo;
+– Conjunto A de arestas
+● Utilizadas para conectar pares de vértices, usando um critério previamente estabelecido.
+
+Vértice é cada um dos itens representados no grafo.
+– O seu significado depende da natureza do problema modelado
+– Pessoas, uma tarefa em um projeto, lugares em um mapa, etc.
+
+Aresta (ou arco) liga dois vértices
+ Diz qual a relação entre eles
+ Dois vértices são adjacentes se existir uma aresta ligando eles.
+ Pessoas (parentesco entre elas ou amizade), tarefas de um projeto (pré-requisito entre as tarefas), lugares de um mapa (estradas que existem ligando os lugares), etc
+ As arestas podem ou não ter direção
+ Existe um orientação quanto ao sentido da aresta
+ Em um grafo direcionado ou digrafo, se uma aresta liga os vértices A a B, isso significa que podemos ir de A para B, mas não o contrário
+
+Grau
+ Indica o número de arestas que conectam um vértice do grafo a outros vértices
+ número de vizinhos que aquele vértice possui no grafo (que chegam ou partem dele)
+ No caso dos dígrafos, temos dois tipos de grau:
+ grau de entrada: número de arestas que chegam ao vértice;
+ grau de saída: número de arestas que partem do vértice.
+
+Laço
+ Uma aresta é chamada de laço se seu vértice de partida é o mesmo que o de chegada
+ A aresta conecta o vértice a ele mesmo
+
+Caminho
+ Um caminho entre dois vértices é uma sequência de vértices onde cada vértice está conectado ao vértice seguinte por meio de uma aresta.
+
+Ciclo
+ Caminho onde o vértice inicial e o final são o mesmo vértice.
+ Note que um ciclo é um caminho fechado sem vértices repetidos (somente o nó origem abre e fecha o ciclo).
+
+Grafo trivial
+ Possui um único vértice e nenhuma aresta
+
+Grafo simples
+ Grafo não direcionado, sem laços e sem arestas paralelas (multigrafo)
+
+Grafo completo
+ Grafo simples onde cada vértice se conecta a todos os outros vértices do grafo.
+
+Grafo regular
+ Grafo onde todos os seus vértices possuem o mesmo grau (número de arestas ligadas a ele)
+ Todo grafo completo é também regular
+
+Subgrafo
+– Gs(Vs,As) é um subgrafo de G(V,A) se o conjunto de vértices Vs for um subconjunto de V, Vs ⊇ V, e
+se o conjunto de arestas As for um subconjunto de A, As ⊇ A.
+
+Grafo bipartido
+ Um grafo G(V,A) onde o seu conjunto de vértices pode ser divididos em dois subconjuntos X e Y sem intersecção.
+ As arestas conectam apenas os vértices que estão em subconjuntos diferentes
+
+Grafo conexo e desconexo
+ Grafo conexo: existe um caminho ligando quaisquer dois vértices.
+ Quando isso não acontece, temos um grafo desconexo
+
+Grafos isomorfos
+ Dois grafos, G1(V1,A1) e G2(V2,A2), são ditos isomorfos se existe uma função que
+faça o mapeamento de vértices e arestas de modo que os dois grafos se tornem coincidentes.
+ Em outras palavras, dois grafos são isomorfos se existe uma função f onde, para cada dois vértices a e b adjacentes no grafo G1, f(a) e
+f(b) também são adjacentes no grafo G2.
+
+Grafo ponderado
+ É um grafo que possui pesos (valor numérico) associados a cada uma de suas arestas
+
+Grafo Euleriano
+ Grafo que possui um ciclo que visita todas as suas arestas apenas uma vez, iniciando e terminando no mesmo vértice.
+
+Grafo Semi-Euleriano
+ Grafo que possui um caminho aberto (não é um ciclo) que visita todas as suas arestas apenas uma vez.
+
+Grafo Hamiltoniano
+ Grafo que possui um caminho que visita todos os seus vértices apenas uma vez.
+ Pode ser um ciclo
+
+Como representar um grafo no computador?
+
+Matriz de Adjacência
+A medida que o número de arestas cresce e não havendo nenhuma outra informação associada a aresta (por exemplo, seu peso),
+o uso de uma matriz de adjacência se torna mais eficiente
+ Utiliza uma matriz N x N para armazenar o grafo, onde N é o número de vértices
+ Alto custo computacional, O(N2)
+ Uma aresta é representada por uma marca na posição (i , j) da matriz
+ Aresta liga o vértice i ao j
+
+Lista de Adjacência
+Lista de adjacência é mais indicada para um grafo que possui muitos vértices mas poucas arestas ligando esses vértices.
+ Utiliza uma lista de vértices para descrever as relações entre os vértices.
+ Um grafo contendo N vértices utiliza um array de ponteiros de tamanho N para armazenar os vértices do grafo
+ Para cada vértice é criada uma lista de arestas, onde cada posição da lista armazena o índice do vértice a qual aquele vértice se conecta
+
+
+
+
+
+
+
+
+
