@@ -1,0 +1,15 @@
+Vamos usar uma lista de adjacência (Lista de arestas: lista sequencial, ligadas a cada um dos vértices). A estrutura do
+grafo deverá conter as seguintes informações:
+ N: número de vértices do grafo.
+ v: vetor de vértices, onde serão conectadas as listas de arestas.
+ carimbo: funciona como um relógio interno, na inicialização de qualquer algoritmo atribuímos o valor 0 a este atributo,
+cada vez que um registro de tempo for solicitado, retornamos o valor corrente e incrementamos o relógio em uma unidade.
+
+A estrutura do vértice deverá conter as seguintes informações:
+ lista: ponteiro para a primeira aresta da lista.
+ cor: as arestas quando processadas por uma busca em profundidade, podem levar a um vértice ainda não explorado
+(cor branca), em processamento (cor cinza) ou já explorados (cor preta)
+ ti: funciona como um relógio interno, quando iniciamos a exploração do primeiro vértice, associamos o tempo inicial 0 a
+este vértice, quando iniciamos a exploração de um primeiro vértice adjacente, associamos o tempo 1 e assim por diante.
+ tf: quando terminamos de visitar um vértice, registramos um tempo de fim.
+ vant: vértice anterior, usado para registrar o vértice que explorou o vértice corrente (usada em busca em profundidade).
