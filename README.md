@@ -105,7 +105,6 @@ Lista de adjacência é mais indicada para um grafo que possui muitos vértices 
 - Um grafo contendo N vértices utiliza um array de ponteiros de tamanho N para -armazenar os vértices do grafo
 - Para cada vértice é criada uma lista de arestas, onde cada posição da lista armazena o índice do vértice a qual aquele vértice se conecta
 
-
 ## Listas
 Cada elemento inserido requer uma alocação de memória.
 - Não garante armazenamento em espaços contíguos de memória.
@@ -122,11 +121,11 @@ Numa lista simplesmente encadeada, junto com a informação a ser armazenada, um
 
 ## Pilhas e filas
 Todo acesso aos seus elementos é feito através do topo.
-– Cada elemento introduzido na pilha passa a ser o elemento do topo.
-– O único elemento que pode ser retirado da pilha é o topo.
-– Lembre-se de uma pilha de pratos.
-– LIFO (Last In , First Out).
-– Funções principais Push (empilhar) e Pop (desempilhar) */
+– Cada elemento introduzido na pilha passa a ser o elemento do topo;
+– O único elemento que pode ser retirado da pilha é o topo;
+– Lembre-se de uma pilha de pratos;
+– LIFO (Last In, First Out);
+– Funções principais Push (empilhar) e Pop (desempilhar).
 
 ## Ponteiro
 Sintaxe:
