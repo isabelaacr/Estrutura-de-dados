@@ -54,9 +54,9 @@ Um grafo é um modelo matemático que representa as relações entre objetos de 
 
 #### Um grafo G(V,A) é definido por dois conjuntos:
 – Conjunto V de vértices (não vazio)
-● Itens representados em um grafo;
+- Itens representados em um grafo;
 – Conjunto A de arestas
-● Utilizadas para conectar pares de vértices, usando um critério previamente estabelecido.
+- Utilizadas para conectar pares de vértices, usando um critério previamente estabelecido.
 
 #### Vértice é cada um dos itens representados no grafo.
 – O seu significado depende da natureza do problema modelado
