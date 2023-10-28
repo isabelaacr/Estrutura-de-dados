@@ -61,30 +61,30 @@ Um grafo é um modelo matemático que representa as relações entre objetos de 
 – Pessoas, uma tarefa em um projeto, lugares em um mapa, etc.
 
 #### Aresta (ou arco) liga dois vértices
- Diz qual a relação entre eles
- Dois vértices são adjacentes se existir uma aresta ligando eles.
- Pessoas (parentesco entre elas ou amizade), tarefas de um projeto (pré-requisito entre as tarefas), lugares de um mapa (estradas que existem ligando os lugares), etc
- As arestas podem ou não ter direção
- Existe um orientação quanto ao sentido da aresta
- Em um grafo direcionado ou digrafo, se uma aresta liga os vértices A a B, isso significa que podemos ir de A para B, mas não o contrário
+- Diz qual a relação entre eles;
+- Dois vértices são adjacentes se existir uma aresta ligando eles;
+- Pessoas (parentesco entre elas ou amizade), tarefas de um projeto (pré requisito entre as tarefas), lugares de um mapa (estradas que existem ligando os lugares), etc;
+- As arestas podem ou não ter direção;
+- Existe um orientação quanto ao sentido da aresta
+- Em um grafo direcionado ou digrafo, se uma aresta liga os vértices A a B, isso significa que podemos ir de A para B, mas não o contrário.
 
 #### Grau
- Indica o número de arestas que conectam um vértice do grafo a outros vértices
- número de vizinhos que aquele vértice possui no grafo (que chegam ou partem dele)
- No caso dos dígrafos, temos dois tipos de grau:
- grau de entrada: número de arestas que chegam ao vértice;
- grau de saída: número de arestas que partem do vértice.
+- Indica o número de arestas que conectam um vértice do grafo a outros vértices
+- número de vizinhos que aquele vértice possui no grafo (que chegam ou partem dele)
+- No caso dos dígrafos, temos dois tipos de grau:
+- grau de entrada: número de arestas que chegam ao vértice;
+- grau de saída: número de arestas que partem do vértice.
 
 #### Laço
- Uma aresta é chamada de laço se seu vértice de partida é o mesmo que o de chegada
- A aresta conecta o vértice a ele mesmo
+- Uma aresta é chamada de laço se seu vértice de partida é o mesmo que o de chegada
+- A aresta conecta o vértice a ele mesmo.
 
 #### Caminho
- Um caminho entre dois vértices é uma sequência de vértices onde cada vértice está conectado ao vértice seguinte por meio de uma aresta.
+- Um caminho entre dois vértices é uma sequência de vértices onde cada vértice está conectado ao vértice seguinte por meio de uma aresta.
 
 #### Ciclo
- Caminho onde o vértice inicial e o final são o mesmo vértice.
- Note que um ciclo é um caminho fechado sem vértices repetidos (somente o nó origem abre e fecha o ciclo).
+- Caminho onde o vértice inicial e o final são o mesmo vértice.
+- Note que um ciclo é um caminho fechado sem vértices repetidos (somente o nó origem abre e fecha o ciclo).
 
 
 ### Como representar um grafo no computador?
@@ -92,30 +92,30 @@ Um grafo é um modelo matemático que representa as relações entre objetos de 
 #### Matriz de Adjacência
 A medida que o número de arestas cresce e não havendo nenhuma outra informação associada a aresta (por exemplo, seu peso),
 o uso de uma matriz de adjacência se torna mais eficiente
- Utiliza uma matriz N x N para armazenar o grafo, onde N é o número de vértices
- Alto custo computacional, O(N2)
- Uma aresta é representada por uma marca na posição (i , j) da matriz
- Aresta liga o vértice i ao j
+- Utiliza uma matriz N x N para armazenar o grafo, onde N é o número de vértices
+- Alto custo computacional, O(N2)
+- Uma aresta é representada por uma marca na posição (i , j) da matriz
+- Aresta liga o vértice i ao j
 
 #### Lista de Adjacência
 Lista de adjacência é mais indicada para um grafo que possui muitos vértices mas poucas arestas ligando esses vértices.
- Utiliza uma lista de vértices para descrever as relações entre os vértices.
- Um grafo contendo N vértices utiliza um array de ponteiros de tamanho N para armazenar os vértices do grafo
- Para cada vértice é criada uma lista de arestas, onde cada posição da lista armazena o índice do vértice a qual aquele vértice se conecta
+- Utiliza uma lista de vértices para descrever as relações entre os vértices.
+- Um grafo contendo N vértices utiliza um array de ponteiros de tamanho N para -armazenar os vértices do grafo
+- Para cada vértice é criada uma lista de arestas, onde cada posição da lista armazena o índice do vértice a qual aquele vértice se conecta
 
 
 ## Listas
 Cada elemento inserido requer uma alocação de memória.
- Não garante armazenamento em espaços contíguos de memória.
- É necessária a informação sobre o encadeamento dos elementos para que se possa acessá-los. /*
+- Não garante armazenamento em espaços contíguos de memória.
+- É necessária a informação sobre o encadeamento dos elementos para que se possa acessá-los. /*
 
 Numa lista simplesmente encadeada, junto com a informação a ser armazenada, um ponteiro para o próximo elemento da lista (ou nó) deve ser incluído.
 
 #### Características:
- Tem um ponteiro indicando o início da lista (prim).
- Cada elemento (nó) da lista tem, conceitualmente, dois campos: a informação armazenada e um ponteiro para o próximo elemento da lista.
- A partir do primeiro elemento da lista posso alcançar o segundo e assim por diante.
- O último elemento da lista contém, como próximo nó um ponteiro inválido, ou seja, NULL.
+- Tem um ponteiro indicando o início da lista (prim).
+- Cada elemento (nó) da lista tem, conceitualmente, dois campos: a informação armazenada e um ponteiro para o próximo elemento da lista.
+- A partir do primeiro elemento da lista posso alcançar o segundo e assim por diante.
+- O último elemento da lista contém, como próximo nó um ponteiro inválido, ou seja, NULL.
 
 
 ## Pilhas e filas
