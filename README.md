@@ -220,7 +220,7 @@ return 0;
 - Array: envolve deslocamento de elementos
 
 #### Regra para posicionamento dos valores na árvore
-- Para cada nó pai
+Para cada nó pai:
 - todos os valores da subárvore esquerda são menores do que o nó pai
 - todos os valores da subárvore direita são maiores do que o nó pai;
 - Inserção e remoção devem ser realizadas respeitando essa regra de posicionamento dos nós.
@@ -230,5 +230,5 @@ return 0;
 - Se V é menor do que a raiz: vá para a subárvore esquerda
 - Se V é maior do que a raiz: vá para a subárvore direita
 - Aplique o método recursivamente
-- pode ser feito sem recursão
+- Pode ser feito sem recursão
 - Dessa forma, percorremos um conjunto de nós da árvore até chegar ao nó folha que irá se tornar o pai do novo nó
