@@ -1,5 +1,5 @@
 # Estrutura-de-dados
-Revisão de estrutura de dados em linguagem C
+Anotações de aula da disciplina de estrutura de dados em linguagem C
 
 ## Busca
 ### Algoritmo genérico de ordenação
