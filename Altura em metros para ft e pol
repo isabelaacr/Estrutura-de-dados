@@ -1,6 +1,5 @@
-# Programa para converter altura em metros para ft e pol
+// Programa para converter altura em metros para ft e pol
 
-```C
 #include <stdio.h>
 #include <math.h>
 
