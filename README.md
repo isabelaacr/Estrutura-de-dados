@@ -105,13 +105,107 @@ Lista de adjacência é mais indicada para um grafo que possui muitos vértices 
 
 
 ## Listas
+Cada elemento inserido requer uma alocação de memória.
+ Não garante armazenamento em espaços contíguos de memória.
+ É necessária a informação sobre o encadeamento dos elementos para que se possa acessá-los. /*
+
+Numa lista simplesmente encadeada, junto com a informação a ser armazenada, um ponteiro para o próximo elemento da lista (ou nó) deve ser incluído.
+
+#### Características:
+ Tem um ponteiro indicando o início da lista (prim).
+ Cada elemento (nó) da lista tem, conceitualmente, dois campos: a informação armazenada e um ponteiro para o próximo elemento da lista.
+ A partir do primeiro elemento da lista posso alcançar o segundo e assim por diante.
+ O último elemento da lista contém, como próximo nó um ponteiro inválido, ou seja, NULL.
+
 
 ## Pilhas e filas
+Todo acesso aos seus elementos é feito através do topo.
+– Cada elemento introduzido na pilha passa a ser o elemento do topo.
+– O único elemento que pode ser retirado da pilha é o topo.
+– Lembre-se de uma pilha de pratos.
+– LIFO (Last In , First Out).
+– Funções principais Push (empilhar) e Pop (desempilhar) */
 
 ## Ponteiro
+Sintaxe:
+_tipo_do_retorno_ _nome_da_função_ (_lista_de_parâmetros_)
+_corpo da funçâo_
+} 
+
+```C
+#include <stdio.h>
+float celsius_fahrenheit (float c) {
+float f = 1.8 * c + 32;
+return f;
+}
+
+int main ( ) {
+float f, c;
+printf ("Entre com temperatura em Celsius: ");
+scanf ("%f", &c);
+f = celsius_fahrenheit (c);
+printf ("Temperatura em Fahrenheit: %f\n", f);
+return 0;
+}
+```
 
 ## Recursão
+Dentro do corpo de uma função podemos chamar novamente a própria função.
+
+```C
+
+void func (int n)
+{
+printf ("%d", n);
+if (n > 0) {
+func (n-1);
+printf (" * ");
+  }
+}
+
+/* O valor do fatorial pode ser definido por:
+
+n! = 1 se n = 0
+   = n * (n-1)! se n > 0 
+
+   Função recursiva para o cálculo do fatorial: */
+   int fat (int n)
+   {
+   if (n == 0)
+    return 1;
+    else 
+    return n * fat (n - 1);
+    }
+```
 
 ## Vetores
+Considerando que os valores serão fornecidos pelo usuário, podemos fazer um programa que lê inicialmente o número de valores que será fornecido e, em seguida, para cada valor capturado, acumula o valor numa variável que representa o somatório de todos os valores. Por fim, o valor da média é calculado e exibido:
+
+```C
+#include <stdio.h>
+int main ( )
+{
+int n; //número de valores
+float xi; //cada um dos valores a ser lido
+float s = 0.0f; //somatório dos valores
+
+//lê número de valores
+printf("Entre com o número de valores: ");
+scanf ("%d", &n);
+
+//captura e acumula cada valor lido
+printf ("Entre com os valores: \n");
+for (int i = 0; i < n; i++) {
+scanf ("%f", &xi);
+s += xi;
+}
+
+//calcula e exibe o valor da média
+float m = s/n;
+printf ("Média: %f\n", m);
+
+return 0;
+}
+```
 
 ## Árvores binárias
