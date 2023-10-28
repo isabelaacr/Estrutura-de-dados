@@ -219,13 +219,13 @@ return 0;
 - É mais fácil inserir valores na árvore do que em um array ordenado
 - Array: envolve deslocamento de elementos
 
-Regra para posicionamento dos valores na árvore
+#### Regra para posicionamento dos valores na árvore
 - Para cada nó pai
 - todos os valores da subárvore esquerda são menores do que o nó pai
 - todos os valores da subárvore direita são maiores do que o nó pai;
 - Inserção e remoção devem ser realizadas respeitando essa regra de posicionamento dos nós.
 
-Para inserir um valor V na árvore
+#### Para inserir um valor V na árvore
 - Se a raiz é igual a NULL (árvore vazia), insira o nó, que se tornará o nó raiz.
 - Se V é menor do que a raiz: vá para a subárvore esquerda
 - Se V é maior do que a raiz: vá para a subárvore direita
