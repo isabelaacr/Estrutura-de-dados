@@ -1,8 +1,8 @@
- A única mudança é que na definição do conteúdo de cada nó da lista devemos definir a informação a ser armazenada.
- Até aqui os nós representavam um número inteiro.
- Veremos como incluir uma estrutura em cada nó da lista e algumas funções que demonstram como tratar esse tipo de informação.
+//  A única mudança é que na definição do conteúdo de cada nó da lista devemos definir a informação a ser armazenada.
+//  Até aqui os nós representavam um número inteiro.
+//  Veremos como incluir uma estrutura em cada nó da lista e algumas funções que demonstram como tratar esse tipo de informação.
 
- Inicialmente criamos a estrutura Retangulo
+//  Inicialmente criamos a estrutura Retangulo
 
 typedef struct retangulo {
   float b;
