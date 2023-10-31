@@ -5,7 +5,7 @@ com Retângulos, Triângulos e Círculos, cujas áreas podem ser calculadas como
 Aret = b.h, Atri = b.h/2, Acirc = πr^2
 
  Definimos um tipo para cada objeto e um identificador para o tipo de estrutura que será utilizada.
-/*
+*/
 
 #define PI 3.14159
 
@@ -36,7 +36,7 @@ float r;
 – Um identificador de qual objeto está armazenado no nó.
 – Um ponteiro para a estrutura que contém a informação.
 – Um ponteiro para o próximo elemento da lista.
-/*
+*/
 
 //Tipo Exportado
 
