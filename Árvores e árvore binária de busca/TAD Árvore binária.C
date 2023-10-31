@@ -81,29 +81,3 @@ ArvNo* arv_criano (char c, ArvNo* esq, ArvNo* dir)
   libera (a -> raiz);
   free (a);
   }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  
-  
-  
-  
-  
-  
-  
-  
