@@ -1,8 +1,8 @@
-Tipo Abstrato de Dados (TAD):
+// Tipo Abstrato de Dados (TAD):
 
-Considerando uma lista que armazene números inteiros, podemos ter uma estrutura para
-representar a lista e outra para representa um nó dessa lista (autoreferenciada).
-/*
+// Considerando uma lista que armazene números inteiros, podemos ter uma estrutura para
+// representar a lista e outra para representa um nó dessa lista (autoreferenciada).
+
 
 typedef struct lista Lista;
 typedef struct listano ListaNo; // listano = conteúdo da lista / ListaNo = endereço da lista
