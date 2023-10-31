@@ -5,7 +5,7 @@ com Retângulos, Triângulos e Círculos, cujas áreas podem ser calculadas como
 Aret = b.h, Atri = b.h/2, Acirc = πr^2
 
  Definimos um tipo para cada objeto e um identificador para o tipo de estrutura que será utilizada.
-/*
+*/
 
 #define PI 3.14159
 
