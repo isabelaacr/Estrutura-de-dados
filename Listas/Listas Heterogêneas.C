@@ -31,12 +31,12 @@ typedef struct circulo {
 float r;
 } Circulo;
 
-*/
- O nó da lista deve ser composto por 3 campos.
-– Um identificador de qual objeto está armazenado no nó.
-– Um ponteiro para a estrutura que contém a informação.
-– Um ponteiro para o próximo elemento da lista.
-*/
+
+//  O nó da lista deve ser composto por 3 campos.
+// – Um identificador de qual objeto está armazenado no nó.
+// – Um ponteiro para a estrutura que contém a informação.
+// – Um ponteiro para o próximo elemento da lista.
+
 
 //Tipo Exportado
 
