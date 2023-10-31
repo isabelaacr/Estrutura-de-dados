@@ -1,11 +1,11 @@
-*/ Uma vez que a informação pode ser representada por um ponteiro, posso armazenar diferentes informações utilizando a mesma estrutura de nós.
-– Por exemplo, imagine manipulando dados de diferentes objetos geométricos para os quais desejamos saber a área. Por questões de simplicidade, trataremos apenas
-com Retângulos, Triângulos e Círculos, cujas áreas podem ser calculadas como:
+// Uma vez que a informação pode ser representada por um ponteiro, posso armazenar diferentes informações utilizando a mesma estrutura de nós.
+// – Por exemplo, imagine manipulando dados de diferentes objetos geométricos para os quais desejamos saber a área. Por questões de simplicidade, trataremos apenas 
+// com Retângulos, Triângulos e Círculos, cujas áreas podem ser calculadas como:
 
 Aret = b.h, Atri = b.h/2, Acirc = πr^2
 
- Definimos um tipo para cada objeto e um identificador para o tipo de estrutura que será utilizada.
-*/
+//  Definimos um tipo para cada objeto e um identificador para o tipo de estrutura que será utilizada.
+
 
 #define PI 3.14159
 
