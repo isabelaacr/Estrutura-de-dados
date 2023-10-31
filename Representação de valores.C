@@ -3,7 +3,7 @@
 
 int main ( )
 {
-#include<stdio.h>
+#include <stdio.h>
 
 float a = 1.34, c = 2.3, x;
 
@@ -19,7 +19,7 @@ return 0;
 int main ( )
 {
     
-#include<stdio.h>
+#include <stdio.h>
 
 float a = 20.423, c = 90.5, x;
 
