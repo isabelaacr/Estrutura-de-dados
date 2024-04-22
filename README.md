@@ -180,7 +180,7 @@ n! = 1 se n = 0
 ```
 
 ## Vetores
-Considerando que os valores serão fornecidos pelo usuário, podemos fazer um programa que lê inicialmente o número de valores que será fornecido e, em seguida, para cada valor capturado, acumula o valor numa variável que representa o somatório de todos os valores. Por fim, o valor da média é calculado e exibido:
+Conhecidos como *arrays*, correspondem a posições de memórias. São identificados por um mesmo nome, individualizados por índices e possuem conteúdo de mesmo tipo. Considerando que os valores serão fornecidos pelo usuário, podemos fazer um programa que lê inicialmente o número de valores que será fornecido e, em seguida, para cada valor capturado, acumula o valor numa variável que representa o somatório de todos os valores. Por fim, o valor da média é calculado e exibido:
 
 ```C
 #include <stdio.h>
