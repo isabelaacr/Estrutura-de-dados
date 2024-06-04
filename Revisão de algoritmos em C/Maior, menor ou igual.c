@@ -1,4 +1,4 @@
-//(7) Escreva um programa que leia um n´umero e imprima uma das mensagens:
+//(7) Escreva um programa que leia um numero e imprima uma das mensagens:
 //“maior do que 20”, “igual a 20” ou “menor do que 20”;
 
 
