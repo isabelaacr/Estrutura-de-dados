@@ -1,8 +1,6 @@
-*/ Todo acesso aos seus elementos é feito através do topo.
-– Cada elemento introduzido na pilha passa a
-ser o elemento do topo.
-– O único elemento que pode ser retirado da
-pilha é o topo.
+Todo acesso aos seus elementos é feito através do topo.
+– Cada elemento introduzido na pilha passa a ser o elemento do topo.
+– O único elemento que pode ser retirado da pilha é o topo.
 – Lembre-se de uma pilha de pratos.
 – LIFO (Last In , First Out).
-– Funções principais Push (empilhar) e Pop (desempilhar) */
+– Funções principais Push (empilhar) e Pop (desempilhar) 
