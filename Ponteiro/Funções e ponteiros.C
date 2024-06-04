@@ -1,7 +1,7 @@
-*/ Sintaxe:
-_tipo_do_retorno_ _nome_da_função_ (_lista_de_parâmetros_)
-_corpo da funçâo_
-} */
+// Sintaxe:
+// _tipo_do_retorno_ _nome_da_função_ (_lista_de_parâmetros_)
+// _corpo da funçâo_
+// } 
 
 //Exemplo:
 
