@@ -11,16 +11,11 @@ formato int. Utilize o seguinte prototipo: int nesimo termoPA(int, int, int);
 #include <stdio.h>
 
     int nesimotermoPA(int a1, int n, int r) {
-    
     int an = a1 + (n - 1)*r;
-    
     return an;
-    
     }
     
-    
     int main() {
-
     int a1, n, r, resultado;
     
     printf("Digite um inteiro representando o primeiro termo de uma P.A:\n");
