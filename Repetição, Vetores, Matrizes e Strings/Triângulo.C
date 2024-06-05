@@ -9,15 +9,13 @@
 #include <stdio.h>
 
 int tipo_triangulo(double a, double b, double c) {
-    if ((a == b && b != c) || (a != b && b == c) || (a == c && b != c)) {
-        return 0; // Isósceles
-    }
-    else if (a != b && b != c && a != c) {
-        return 1; // Escaleno
-    }
-    else {
+    if (a == b && b == c) {
         return 2; // Equilátero
     }
+    if (a != b && a != c && b != c) {
+        return 1; // Escaleno
+    }
+    return 0; // Isósceles
 }
 
 int main() {
@@ -27,14 +25,20 @@ int main() {
     scanf("%lf %lf %lf", &a, &b, &c);
     
     int resultado = tipo_triangulo(a, b, c);
-    if (resultado == 0) {
-        printf("O triângulo é isósceles\n");
-    }
-    else if (resultado == 1) {
-        printf("O triângulo é escaleno\n");
-    }
-    else {
-        printf("O triângulo é equilátero\n");
+    
+    switch(resultado) {
+        case 0:
+            printf("O triângulo é isósceles\n");
+            break;
+        case 1:
+            printf("O triângulo é escaleno\n");
+            break;
+        case 2:
+            printf("O triângulo é equilátero\n");
+            break;
+        default:
+            printf("Erro: triângulo inválido\n");
+            break;
     }
     
     return 0;
