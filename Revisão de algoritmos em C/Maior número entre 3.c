@@ -13,7 +13,7 @@ int main()
        printf("O maior numero eh: %d\n", a);
    }
        else if (b > a && b > c) {
-       printf("O maior numero eh: %d\n", c);
+       printf("O maior numero eh: %d\n", b);
    }
     
     else if (c > a && c > b) {
