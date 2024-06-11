@@ -11,7 +11,7 @@ int main()
     scanf ("%d", &i);
    
    if (i%2==0) { 
-       printf("eh par);
+       printf("eh par");
    }
        else {
        printf("eh impar");
