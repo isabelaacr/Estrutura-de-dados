@@ -1,29 +1,28 @@
 #include <stdio.h>
-int par_impar(int n1) {
-if (n1%2==0) {;
-    return 0;
-    }
-else { 
-    return 1;
-    }
+
+int eh_par(int numero) {
+    return numero % 2 == 0;
 }
 
-int main()
-{
+int validar(int numero) {
+    return numero > 0;
+}
+
+int main() {
     int n1;
-    
-    printf("Digite um numero inteiro maior do que zero:\n");
+
+    printf("Digite um número inteiro maior do que zero: ");
     scanf("%d", &n1);
-     if (n1 > 0) {
-     int resultado = par_impar(n1);
-      if (resultado == 0) {
-        printf("O numero eh par!\n");
+
+    if (validar(n1)) {
+        if (eh_par(n1)) {
+            printf("O número eh par!\n");
+        } else {
+            printf("O número eh ímpar!\n");
+        }
+    } else {
+        printf("Número inválido.\n");
     }
-    else {
-        printf("O numero eh impar!\n");
-    }
-   } else {
-        printf("Numero invalido.\n");
-    }
+
     return 0;
 }
